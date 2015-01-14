@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 22-dec-2014 18:32:42 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="dedruiwekorrel_" name="DAL.Wijn" optimistic-lock="version" table="korrel_wines">
+    <id name="id" type="java.lang.Integer">
+      <column name="id"/>
+      <generator class="identity"/>
+    </id>
+    <property name="name" type="string">
+      <column length="120" name="name" not-null="true"/>
+    </property>
+    <property name="typeid" type="int">
+      <column name="typeid" not-null="true"/>
+    </property>
+    <property name="platter" type="string">
+      <column length="3" name="platter" not-null="true"/>
+    </property>
+    <property name="year" type="int">
+      <column name="year" not-null="true"/>
+    </property>
+    <property name="packprice" type="big_decimal">
+      <column name="packprice" not-null="true" precision="10" scale="4"/>
+    </property>
+    <property name="packsize" type="byte">
+      <column name="packsize" not-null="true"/>
+    </property>
+    <property name="price" type="big_decimal">
+      <column name="price" not-null="true" precision="10" scale="4"/>
+    </property>
+    <property name="volume" type="big_decimal">
+      <column name="volume" not-null="true" precision="10"/>
+    </property>
+    <property name="description" type="string">
+      <column length="65535" name="description" not-null="true"/>
+    </property>
+    <property name="estateid" type="int">
+      <column name="estateid" not-null="true"/>
+    </property>
+    <property name="imageid" type="int">
+      <column name="imageid" not-null="true"/>
+    </property>
+    <property name="flags" type="byte">
+      <column name="flags" not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>

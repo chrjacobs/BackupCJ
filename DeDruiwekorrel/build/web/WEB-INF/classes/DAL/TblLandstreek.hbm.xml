@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 22-dec-2014 14:06:09 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="wijnendb" name="DAL.Landstreek" optimistic-lock="version" table="tbl_landstreek">
+    <id name="landstreekId" type="java.lang.Integer">
+      <column name="landstreekID"/>
+      <generator class="identity"/>
+    </id>
+    <many-to-one class="DAL.Land" fetch="select" name="tblLand">
+      <column name="landID" not-null="true"/>
+    </many-to-one>
+    <property name="naam" type="string">
+      <column length="250" name="naam" not-null="true"/>
+    </property>
+    <property name="omschrijving" type="string">
+      <column length="250" name="omschrijving" not-null="true"/>
+    </property>
+    <property name="link" type="string">
+      <column length="100" name="link" not-null="true"/>
+    </property>
+    <property name="foto" type="string">
+      <column length="100" name="foto" not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>
